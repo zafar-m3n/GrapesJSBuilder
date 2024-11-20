@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "grapesjs": "^0.22.3",
+    "grapesjs-blocks-basic": "^1.0.2",
+    "grapesjs-custom-code": "^1.0.2",
+    "grapesjs-plugin-forms": "^2.0.6",
     "grapesjs-preset-webpage": "^1.0.3",
+    "grapesjs-tabs": "^1.0.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -27,6 +31,7 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
     "postcss": "^8.4.49",
+    "sass-embedded": "^1.81.0",
     "tailwindcss": "^3.4.15",
     "vite": "^5.4.10"
   }
