@@ -4,6 +4,7 @@ import gjsPresetWebpage from "grapesjs-preset-webpage";
 import grapesjsBlocksBasic from "grapesjs-blocks-basic";
 import grapesjsCustomCode from "grapesjs-custom-code";
 import { addAllBlogs } from "@/categories/blogs/index";
+import { addAllContacts } from "@/categories/contacts/index";
 import "grapesjs/dist/css/grapes.min.css";
 import "@/styles/main.scss";
 
@@ -35,6 +36,7 @@ function App() {
     });
 
     addAllBlogs(editor);
+    addAllContacts(editor);
 
     editor.on("load", () => {
       const blockCategories = editor.BlockManager.getCategories();
