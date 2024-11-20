@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import grapesjs from "grapesjs";
 import gjsPresetWebpage from "grapesjs-preset-webpage";
 import grapesjsBlocksBasic from "grapesjs-blocks-basic";
-import grapesjsTabs from "grapesjs-tabs";
-import grapesjsPluginForms from "grapesjs-plugin-forms";
 import grapesjsCustomCode from "grapesjs-custom-code";
 import "grapesjs/dist/css/grapes.min.css";
 import "@/styles/main.scss";
@@ -21,6 +19,11 @@ function App() {
           blocksBasicOpts: true,
         },
       },
+    });
+
+    editor.on("load", () => {
+      const blockCategories = editor.BlockManager.getCategories();
+      blockCategories.each((category) => category.set("open", false));
     });
 
     setEditor(editor);
