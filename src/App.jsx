@@ -7,6 +7,7 @@ import { addAllBlogs } from "@/categories/blogs/index";
 import { addAllContacts } from "@/categories/contacts/index";
 import { addAllTestimonials } from "@/categories/testimonials/index";
 import { addAllTeams } from "@/categories/teams/index";
+import { addAllStatistics } from "@/categories/statistics/index";
 import "grapesjs/dist/css/grapes.min.css";
 import "@/styles/main.scss";
 
@@ -37,6 +38,7 @@ function App() {
       head.appendChild(tailwindStyles);
     });
 
+    addAllStatistics(editor);
     addAllBlogs(editor);
     addAllTeams(editor);
     addAllContacts(editor);
