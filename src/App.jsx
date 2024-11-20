@@ -6,6 +6,7 @@ import grapesjsCustomCode from "grapesjs-custom-code";
 import { addAllBlogs } from "@/categories/blogs/index";
 import { addAllContacts } from "@/categories/contacts/index";
 import { addAllTestimonials } from "@/categories/testimonials/index";
+import { addAllTeams } from "@/categories/teams/index";
 import "grapesjs/dist/css/grapes.min.css";
 import "@/styles/main.scss";
 
@@ -37,6 +38,7 @@ function App() {
     });
 
     addAllBlogs(editor);
+    addAllTeams(editor);
     addAllContacts(editor);
     addAllTestimonials(editor);
 
