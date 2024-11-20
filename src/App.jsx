@@ -8,6 +8,7 @@ import { addAllContacts } from "@/categories/contacts/index";
 import { addAllTestimonials } from "@/categories/testimonials/index";
 import { addAllTeams } from "@/categories/teams/index";
 import { addAllStatistics } from "@/categories/statistics/index";
+import { addAllPricing } from "@/categories/pricing/index";
 import "grapesjs/dist/css/grapes.min.css";
 import "@/styles/main.scss";
 
@@ -40,6 +41,7 @@ function App() {
 
     addAllStatistics(editor);
     addAllBlogs(editor);
+    addAllPricing(editor);
     addAllTeams(editor);
     addAllContacts(editor);
     addAllTestimonials(editor);
