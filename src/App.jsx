@@ -3,6 +3,7 @@ import grapesjs from "grapesjs";
 import gjsPresetWebpage from "grapesjs-preset-webpage";
 import grapesjsBlocksBasic from "grapesjs-blocks-basic";
 import grapesjsCustomCode from "grapesjs-custom-code";
+import { addAllBlogs } from "@/categories/blogs/index";
 import "grapesjs/dist/css/grapes.min.css";
 import "@/styles/main.scss";
 
@@ -20,6 +21,20 @@ function App() {
         },
       },
     });
+
+    editor.on("load", () => {
+      const iframe = editor.Canvas.getFrameEl();
+      const head = iframe.contentDocument.head;
+
+      // Inject Tailwind CSS into GrapesJS iframe
+      const tailwindStyles = document.createElement("link");
+      tailwindStyles.rel = "stylesheet";
+      tailwindStyles.href =
+        "https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css";
+      head.appendChild(tailwindStyles);
+    });
+
+    addAllBlogs(editor);
 
     editor.on("load", () => {
       const blockCategories = editor.BlockManager.getCategories();
