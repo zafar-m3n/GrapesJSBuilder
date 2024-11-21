@@ -3,12 +3,13 @@ import grapesjs from "grapesjs";
 import gjsPresetWebpage from "grapesjs-preset-webpage";
 import grapesjsBlocksBasic from "grapesjs-blocks-basic";
 import grapesjsCustomCode from "grapesjs-custom-code";
-import { addAllBlogs } from "@/categories/blogs/index";
-import { addAllContacts } from "@/categories/contacts/index";
-import { addAllTestimonials } from "@/categories/testimonials/index";
-import { addAllTeams } from "@/categories/teams/index";
-import { addAllStatistics } from "@/categories/statistics/index";
-import { addAllPricing } from "@/categories/pricing/index";
+import { addAllBlogs } from "@/categories/blogs";
+import { addAllContacts } from "@/categories/contacts";
+import { addAllTestimonials } from "@/categories/testimonials";
+import { addAllTeams } from "@/categories/teams";
+import { addAllStatistics } from "@/categories/statistics";
+import { addAllPricing } from "@/categories/pricing";
+import { addAllHeroSections } from "@/categories/hero";
 import "grapesjs/dist/css/grapes.min.css";
 import "@/styles/main.scss";
 
@@ -39,6 +40,7 @@ function App() {
       head.appendChild(tailwindStyles);
     });
 
+    addAllHeroSections(editor);
     addAllStatistics(editor);
     addAllBlogs(editor);
     addAllPricing(editor);
