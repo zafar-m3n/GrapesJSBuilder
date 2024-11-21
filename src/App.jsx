@@ -11,6 +11,7 @@ import { addAllStatistics } from "@/categories/statistics";
 import { addAllPricing } from "@/categories/pricing";
 import { addAllHeroSections } from "@/categories/hero";
 import { addAllHeaders } from "@/categories/header";
+import { addAllGallerys } from "@/categories/gallery";
 import "grapesjs/dist/css/grapes.min.css";
 import "@/styles/main.scss";
 
@@ -43,6 +44,7 @@ function App() {
 
     addAllHeaders(editor);
     addAllHeroSections(editor);
+    addAllGallerys(editor);
     addAllStatistics(editor);
     addAllBlogs(editor);
     addAllPricing(editor);
