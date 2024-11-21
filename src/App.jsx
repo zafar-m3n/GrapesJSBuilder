@@ -10,6 +10,7 @@ import { addAllTeams } from "@/categories/teams";
 import { addAllStatistics } from "@/categories/statistics";
 import { addAllPricing } from "@/categories/pricing";
 import { addAllHeroSections } from "@/categories/hero";
+import { addAllHeaders } from "@/categories/header";
 import "grapesjs/dist/css/grapes.min.css";
 import "@/styles/main.scss";
 
@@ -40,6 +41,7 @@ function App() {
       head.appendChild(tailwindStyles);
     });
 
+    addAllHeaders(editor);
     addAllHeroSections(editor);
     addAllStatistics(editor);
     addAllBlogs(editor);
