@@ -12,6 +12,7 @@ import { addAllPricing } from "@/categories/pricing";
 import { addAllHeroSections } from "@/categories/hero";
 import { addAllHeaders } from "@/categories/header";
 import { addAllGallerys } from "@/categories/gallery";
+import { addAllFooters } from "@/categories/footer";
 import "grapesjs/dist/css/grapes.min.css";
 import "@/styles/main.scss";
 
@@ -51,6 +52,7 @@ function App() {
     addAllTeams(editor);
     addAllContacts(editor);
     addAllTestimonials(editor);
+    addAllFooters(editor);
 
     editor.on("load", () => {
       const blockCategories = editor.BlockManager.getCategories();
